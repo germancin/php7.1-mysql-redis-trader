@@ -14,3 +14,8 @@ sudo apt-get install -y composer pkg-config php-dompdf php-pear php-imagick auto
 sudo apt-get install php7.1-dev
 sudo pecl channel-update pecl.php.net
 sudo pecl install trader
+
+
+You should add "extension=trader.so" to php.ini
+
+sudo /etc/apache2/sites-available/000-default.conf
