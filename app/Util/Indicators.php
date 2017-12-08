@@ -300,6 +300,10 @@ class Indicators
      */
     public function rsi($pair='BTC/USD', $data=null, $period=14)
     {
+
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+
         $LOW_RSI  = 30;
         $HIGH_RSI = 70;
 
@@ -309,6 +313,8 @@ class Indicators
         #$data2 = $data;
         #$current = array_pop($data2['close']); #$data['close'][count($data['close']) - 1];    // we assume this is current
         #$prev_close = array_pop($data2['close']); #$data['close'][count($data['close']) - 2]; // prior close
+
+        var_dump($data['close']);
 
         $rsi = trader_rsi ($data['close'], $period);
         $rsi = array_pop($rsi);
