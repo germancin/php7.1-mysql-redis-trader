@@ -27,4 +27,3 @@ try {
     // script notifications will be send to this email:
     $msg = $e->getMessage();
 }
-
