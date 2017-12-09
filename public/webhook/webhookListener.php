@@ -124,7 +124,9 @@ class gitHook {
 
 $gitHook = new gitHook();
 
-$gitHook->log("::::WELCOME TO DEPLOYH PROCESS LOG:::: \n\n\n\n");
+var_dump($_POST);
+
+$gitHook->log( var_dump($_POST) . "::::WELCOME TO DEPLOY PROCESS LOG:::: \n\n\n\n");
 
 try {
     if (isset($_POST['payload'])) {
@@ -135,7 +137,5 @@ try {
     $msg = $e->getMessage();
     mail($gitHook->getEmail(), $msg, ''.$e);
 }
-
-
 
 
