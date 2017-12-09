@@ -1,7 +1,6 @@
 <?php
 class gitHook {
 
-    var $file = '/var/www/public/webhook/logs.txt';
     var $config_filename = 'config.json';
     var $email = 'elmaildegerman@gmail.com';
 
@@ -52,7 +51,6 @@ class gitHook {
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         }
-
 
         foreach ($config['endpoints'] as $endpoint) {
             // check if the push came from the right repository and branch
