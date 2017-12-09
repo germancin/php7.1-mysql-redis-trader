@@ -124,7 +124,6 @@ class gitHook {
 }
 
 
-
 $gitHook = new gitHook();
 
 var_dump($_POST);
