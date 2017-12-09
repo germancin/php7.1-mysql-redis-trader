@@ -21,7 +21,6 @@ class gitHook {
 
 $gitHook = new gitHook();
 
-
 try {
     if (isset($_POST['payload'])) {
         $gitHook->run($_POST['payload']);
