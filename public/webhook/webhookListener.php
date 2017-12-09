@@ -86,7 +86,7 @@ class gitHook {
                     $body .= '<p>Deploy date: ' . $commit[0]['timestamp'] . '</p>';
                     $body .= '<p>Cheers, <br/>Github Webhook Endpoint</p>';
                     $msg = 'tbot has been deployed ' . $commit[0]['id'];
-                    mail($config['email']['to'], $msg, $body, $headers);
+                    //mail($config['email']['to'], $msg, $body, $headers);
                 }
 
                 return true;
