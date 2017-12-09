@@ -14,8 +14,6 @@ class gitHook {
         exec("cd /var/www && ssh -T git@github.com");
         exec("git reset --hard HEAD");
         exec("git pull origin master");
-
-
     }
 
 }
