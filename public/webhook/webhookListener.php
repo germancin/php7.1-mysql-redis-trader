@@ -113,9 +113,8 @@ class gitHook {
         $myfile = fopen($this->file, "a+");
         fwrite($myfile, $text . " \n");
         fclose($myfile);
-        chmod($file, 0777);
+        chmod($myfile, 0777);
         return (!empty($text))? true : false;
-        
     }
 
     public function getEmail() {
