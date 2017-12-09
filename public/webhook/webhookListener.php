@@ -95,7 +95,7 @@ class gitHook {
                     $body .= '</ul>';
                     $body .= '<p>Deploy date: ' . $commit[0]['timestamp'] . '</p>';
                     $body .= '<p>Cheers, <br/>Github Webhook Endpoint</p>';
-                    $msg = 'jengibreLs has been deployed ' . $commit[0]['id'];
+                    $msg = 'tbot has been deployed ' . $commit[0]['id'];
                     mail($config['email']['to'], $msg, $body, $headers);
                 }
 
@@ -129,6 +129,7 @@ try {
     // script notifications will be send to this email:
     $msg = $e->getMessage();
     mail($gitHook->getEmail(), $msg, ''.$e);
+
 }
 
 
