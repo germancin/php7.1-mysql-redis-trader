@@ -110,10 +110,11 @@ class gitHook {
     }
 
     public function log($text) {
+        chmod($this->file, 0777);
         $myfile = fopen($this->file, "a+");
         fwrite($myfile, $text . " \n");
         fclose($myfile);
-        chmod($myfile, 0777);
+
         return (!empty($text))? true : false;
     }
 
