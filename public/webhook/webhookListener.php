@@ -1,7 +1,7 @@
 <?php
 class gitHook {
 
-    var $file = 'logs.txt';
+    var $file = '/var/www/public/webhook/logs.txt';
     var $config_filename = 'config.json';
     var $email = 'elmaildegerman@gmail.com';
 
@@ -125,6 +125,7 @@ class gitHook {
 $gitHook = new gitHook();
 
 var_dump($_POST);
+error_log('hi i am here again');
 
 $gitHook->log( var_dump($_POST) . "::::WELCOME TO DEPLOY PROCESS LOG:::: \n\n\n\n");
 
