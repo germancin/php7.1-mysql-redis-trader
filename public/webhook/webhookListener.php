@@ -53,19 +53,14 @@ class gitHook {
             $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         }
 
-        $this->log("::::Payload::::");
 
         foreach ($config['endpoints'] as $endpoint) {
             // check if the push came from the right repository and branch
             if ($html_url == 'https://github.com/' . $endpoint['repo'] && $ref == 'refs/heads/' . $endpoint['branch']) {
 
-                $this->log("Deploying... " . $endpoint['run']);
-
                 //github commands to run.
                 exec("git reset --hard HEAD"); 
                 exec("git pull");
-
-                $this->log("Successfull deployment...\nSending email confirmation...");
 
                 // prepare and send the notification email
                 if (isset($config['email'])) {
@@ -101,21 +96,10 @@ class gitHook {
                     mail($config['email']['to'], $msg, $body, $headers);
                 }
 
-                $this->log("::::MASTER BRANCH GOT DEPLOYED:::: \n\n\n\n");
-
                 return true;
             }
         }
 
-    }
-
-    public function log($text) {
-        chmod($this->file, 0777);
-        $myfile = fopen($this->file, "a+");
-        fwrite($myfile, $text . " \n");
-        fclose($myfile);
-
-        return (!empty($text))? true : false;
     }
 
 
@@ -129,9 +113,8 @@ class gitHook {
 $gitHook = new gitHook();
 
 var_dump($_POST);
-error_log('hi i am here again');
+error_log($_POST . 'hi i am here again');
 
-$gitHook->log( var_dump($_POST) . "::::WELCOME TO DEPLOY PROCESS LOG:::: \n\n\n\n");
 
 try {
     if (isset($_POST['payload'])) {
