@@ -59,8 +59,8 @@ class gitHook {
             if ($html_url == 'https://github.com/' . $endpoint['repo'] && $ref == 'refs/heads/' . $endpoint['branch']) {
 
                 //github commands to run.
-                exec("git reset --hard HEAD"); 
-                exec("git pull");
+                exec("cd /var/www && git reset --hard HEAD");
+                exec("cd /var/www && git pull origin master");
 
                 // prepare and send the notification email
                 if (isset($config['email'])) {
@@ -105,8 +105,6 @@ class gitHook {
 
 
 $gitHook = new gitHook();
-
-error_log(var_dump($_POST) . 'hi i am here again');
 
 
 try {
