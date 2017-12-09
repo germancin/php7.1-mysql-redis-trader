@@ -106,8 +106,7 @@ class gitHook {
 
 $gitHook = new gitHook();
 
-var_dump($_POST);
-error_log($_POST . 'hi i am here again');
+error_log(var_dump($_POST) . 'hi i am here again');
 
 
 try {
