@@ -119,4 +119,3 @@ try {
     mail($gitHook->getEmail(), $msg, ''.$e);
 }
 
-
