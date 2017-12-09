@@ -118,6 +118,7 @@ class gitHook {
         return (!empty($text))? true : false;
     }
 
+
     public function getEmail() {
         return $this->email;
     }
