@@ -115,6 +115,7 @@ class gitHook {
         fclose($myfile);
         chmod($file, 0777);
         return (!empty($text))? true : false;
+        
     }
 
     public function getEmail() {
