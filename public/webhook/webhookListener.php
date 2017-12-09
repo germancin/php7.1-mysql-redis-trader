@@ -120,6 +120,8 @@ class gitHook {
 
 }
 
+$this->log("::::WELCOME TO DEPLOYH PROCESS LOG:::: \n\n\n\n");
+
 $gitHook = new gitHook();
 try {
     if (isset($_POST['payload'])) {
