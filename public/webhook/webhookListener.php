@@ -10,9 +10,10 @@ class gitHook {
         error_log($tt);
 
         // read config.json
-        exec("cd /var/www && git reset --hard HEAD");
+        ssh -T git@github.com
+        exec("cd /var/www && ssh -T git@github.com");
+        exec("git reset --hard HEAD");
         exec("git pull origin master");
-
 
 
     }
