@@ -19,7 +19,6 @@ class gitHook {
 
 }
 
-
 $gitHook = new gitHook();
 
 
