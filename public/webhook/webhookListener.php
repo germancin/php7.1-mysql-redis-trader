@@ -23,7 +23,6 @@ class gitHook {
         $ref = '';
         $commits = array();
 
-
         foreach ($jsonIterator as $key => $val) {
             //fwrite($myfile, "$key => $val\n" );
 
