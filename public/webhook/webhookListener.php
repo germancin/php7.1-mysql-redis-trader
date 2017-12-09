@@ -74,13 +74,6 @@ class gitHook {
                     $body .= '<ul>';
 
                     foreach ($commits as $commit) {
-                        $this->log("COMMIT INFO: ");
-                        $this->log("   Commit Message: " . $commit[0]['message']);
-                        $this->log("   Files Added: " . count($commit[0]['added']));
-                        $this->log("   Files Removed: " . count($commit[0]['removed']));
-                        $this->log("   Files Modified: " . count($commit[0]['modified']));
-                        $this->log("   Commit Date: " . $commit[0]['timestamp']);
-                        $this->log("   Commit URL: " . $commit[0]['url']);
 
                         $body .= '<li>'.$commit[0]['message'].'<br />';
                         $body .= '<small style="color:#999">added: <b>'.count($commit[0]['added'])
