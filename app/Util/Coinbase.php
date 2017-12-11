@@ -465,7 +465,6 @@ class Coinbase
         #error_log($url);
         #error_log($body);
         $curl = curl_init();
-
         $options = array(
             CURLOPT_URL => $url,
             CURLOPT_HTTPHEADER => $headers,
@@ -485,6 +484,7 @@ class Coinbase
             $options[CURLOPT_POSTFIELDS] = $body;
         }
         #error_log(print_r($options,1));
+
         curl_setopt_array($curl, $options);
         $response = curl_exec($curl);
         if ($response === false) {

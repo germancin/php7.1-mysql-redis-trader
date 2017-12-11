@@ -170,7 +170,7 @@ class GdaxScalperCommand extends Command
             $ticker[7] = $_ticker['price'];
             $ticker[8] = $_ticker['volume'];
             $this->markOHLC($ticker, 1, $this->instrument);
-            $data = $this->getRecentData($this->instrument, 20);
+            $data = $this->getRecentData($this->instrument, 120);
 
             $sar_stoch_sig = $this->bowhead_sar_stoch($this->instrument, $data);
             /**
