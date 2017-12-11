@@ -1,6 +1,6 @@
 <?php
 
-error_log("error at least");
+error_log("error at least", 0);
 
 exit();
 
