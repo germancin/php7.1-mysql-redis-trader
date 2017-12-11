@@ -1,9 +1,4 @@
 <?php
-
-error_log("error at least", 0);
-
-exit();
-
 set_time_limit(0);
 
 date_default_timezone_set('US/Eastern');
@@ -23,13 +18,13 @@ myLog(date('l jS \of F Y h:i:s A') . " \n");
 
 echo "Runing ... bowhead:websocket_bitfinex. \n\n";
 
-exec("php artisan bowhead:websocket_bitfinex > /dev/null &");
+exec("/usr/bin/php7.1 artisan bowhead:websocket_bitfinex > /dev/null &");
 
 myLog("Runing ... bowhead:websocket_bitfinex. \n");
 
 echo "Runing ... bowhead:websocket_bitfinex_eth. \n\n";
 
-exec("php artisan bowhead:websocket_bitfinex_eth > /dev/null &");
+exec("/usr/bin/php7.1 artisan bowhead:websocket_bitfinex_eth > /dev/null &");
 
 myLog("Runing ... bowhead:websocket_bitfinex_eth. \n\n");
 
