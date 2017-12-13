@@ -67,7 +67,7 @@ var totalLendingWallet = "174.26";
 var totalActiveSearchVal = "1,280.00";
 var totalActiveTargetVal = "11,935.87";
 
-var totalEarnsSearchVal = "226.30";
+var totalEarnsSearchVal = "226.45";
 var totalEarnsTargetVal = "4,038.52";
 
 Content.Manager.topMenuLendingWallet(totalLendingWallet);
