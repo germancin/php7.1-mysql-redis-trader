@@ -21,9 +21,10 @@ app.use(helmet())
 app.use(express.json())
 
 app.use( (req, res, next) => {
-    let  allowedOrigins = [`http://localhost:${port}`, 'http://142.93.115.215']
+    let  allowedOrigins = [`http://localhost:${port}`]
     let  origin = req.headers.origin
     if (allowedOrigins.indexOf(origin) > -1) {
+        console.log('Is allowed bcs: ' , origin, allowedOrigins);
         res.setHeader('Access-Control-Allow-Origin', origin)
     }
     res.setHeader('Access-Control-Allow-Headers', "Authorization, Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Headers")
